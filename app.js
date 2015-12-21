@@ -7,6 +7,7 @@ var express = require("express"),
 app.use(bodyParser.urlencoded({ extended: false }));  
 app.use(bodyParser.json());  
 app.use(methodOverride());
+var port = process.env.PORT || 8080;
 
 var router = express.Router();
 
@@ -4530,6 +4531,6 @@ router.get('/', function(req, res) {
 
 app.use(router);
 
-app.listen(80, function() {  
-  console.log("Node server running on http://localhost:3000 ");
+app.listen(port, function() {  
+  console.log("Node server running on http://localhost:" + port);
 });
