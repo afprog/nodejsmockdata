@@ -1,12 +1,6 @@
-var express = require("express"),  
-    app = express(),
-    bodyParser  = require("body-parser"),
-    methodOverride = require("method-override");
-    mongoose = require('mongoose');
+var express = require("express");
+var app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));  
-app.use(bodyParser.json());  
-app.use(methodOverride());
 var port = process.env.PORT || 8080;
 
 var router = express.Router();
